@@ -19,3 +19,14 @@
     width: 370px;
     background-color: #242429;
 }
+
+#customProfileBar {
+    position: relative;
+    top: 13px;
+    left: 470px;
+}
+
+#customBody>div {
+    width: 10px;
+    height: 10px;
+}

@@ -1,0 +1,21 @@
+#sidePaneLogo {
+    position: relative;
+    top: 50px;
+    right: -45px;
+}
+
+#menu>a>p {
+    font-size: 17px;
+    color: white;
+}
+
+#menuSection {
+    position: relative;
+    top: 140px;
+    left: -10px;
+}
+
+#customSide {
+    width: 370px;
+    background-color: #242429;
+}

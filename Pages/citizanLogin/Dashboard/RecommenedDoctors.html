@@ -34,7 +34,8 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="RecommendedDoctorAssets/assets/css/main.css" rel="stylesheet">
+</head>
 
 <body>
 <div class="container-xxl position-relative bg-white d-flex p-0">
@@ -66,10 +67,10 @@
             <div class="navbar-nav w-100">
                 <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Home</a>
 
-                <a href="MyHealth.html" class="nav-item nav-link"><i class="fa fa-heart me-2"></i>My Health</a>
+                <a href="MyHealth.html" class="nav-item nav-link "><i class="fa fa-heart me-2"></i>My Health</a>
                 <a href="Report.html" class="nav-item nav-link "><i class="fa fa-file me-2"></i>Report</a>
                 <a href="Doctors.html" class="nav-item nav-link active"><i class="fa fa-stethoscope me-2"></i>Doctor</a>
-                <a href="Order.html" class="nav-item nav-link"><i class="fa fa-file-invoice-dollar me-2"></i>Order</a>
+                <a href="Order.html" class="nav-item nav-link "><i class="fa fa-file-invoice-dollar me-2"></i>Order</a>
                 <a href="Shedule.html" class="nav-item nav-link"><i class="fa fa-calendar me-2"></i>Shedule</a>
                 <a href="chart.html" class="nav-item nav-link"><i class="fa fa-sign-out-alt me-2"></i>Log Out</a>
 
@@ -171,67 +172,106 @@
         </nav>
         <!-- Navbar End -->
         <div class="container-fluid pt-4 px-4">
-
-            <section id="doctors" class="doctors section">
-
+            <section id="testimonials" class="testimonials section ">
                 <!-- Section Title -->
                 <div class="container section-title" data-aos="fade-up">
-
+                    <h2>Recommended Doctors For You</h2>
+                    <p>Read testimonials from our patients about our doctors and their expertise.</p>
                 </div><!-- End Section Title -->
 
-                <div class="container">
-
-                    <div class="row gy-4">
-
-                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                            <a href="RecommenedDoctors.html" class="team-member d-flex align-items-start text-decoration-none">
-                                <div class="pic"><img src="img/doc5.png" class="img-fluid" alt=""></div>
-                                <div class="member-info">
-                                    <br>
-
-                                    <h2>Doctors</h2>
-
-                                    <p class="text-success">Obtain Your Recommended Doctors </p>
-                                    <h6 class="text-primary">Click Here</h6>
-
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper init-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Testimonial Item 1 -->
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <img src="RecommendedDoctorAssets/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="Dr. Emily Smith">
+                                    <h3>Dr.Smith</h3>
+                                    <h4>Neurologist</h4>
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p>
+                                        <i class="bi bi-quote quote-icon-left"></i>
+                                        <span>Dr. Smith's expertise in neurology was evident from our first consultation. he provided a comprehensive treatment plan that has significantly improved my condition. Her caring nature and attention to detail are truly commendable.</span>
+                                        <i class="bi bi-quote quote-icon-right"></i>
+                                    </p>
                                 </div>
-                            </a>
-                        </div><div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                        <a href="RecentDoctor.html" class="team-member d-flex align-items-start text-decoration-none">
-                            <div class="pic">
-                                <img src="img/doc6.png" class="img-fluid" alt="">
-                            </div>
-                            <div class="member-info">
-                                <br>
-                                <h2>Recent Doctors</h2>
-                                <p class="text-success">Obtain Your Recent Doctors</p>
-                                <h6 class="text-primary">Click Here</h6>
-                            </div>
-                        </a>
+                            </div><!-- End testimonial item -->
 
+                            <!-- Testimonial Item 2 -->
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <img src="RecommendedDoctorAssets/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="Dr. Michael Jones">
+                                    <h3>Dr. Michael Jones</h3>
+                                    <h4>Cardiologist</h4>
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p>
+                                        <i class="bi bi-quote quote-icon-left"></i>
+                                        <span>Dr. Jones's professionalism and thorough knowledge in cardiology have been life-changing. her accurate diagnosis and patient-centric approach have made a significant positive impact on my heart health.</span>
+                                        <i class="bi bi-quote quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div><!-- End testimonial item -->
+
+                            <!-- Testimonial Item 3 -->
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <img src="RecommendedDoctorAssets/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="Dr. Sarah Davis">
+                                    <h3>Dr. Sarah Davis</h3>
+                                    <h4>Dermatologist</h4>
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p>
+                                        <i class="bi bi-quote quote-icon-left"></i>
+                                        <span>Dr. Davis's expertise in dermatology helped me with a chronic skin condition that I had struggled with for years. Her personalized treatment approach and empathetic care have made a remarkable difference.</span>
+                                        <i class="bi bi-quote quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div><!-- End testimonial item -->
+
+                            <!-- Testimonial Item 4 -->
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <img src="RecommendedDoctorAssets/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="Dr. John Williams">
+                                    <h3>Dr. John Williams</h3>
+                                    <h4>Orthopedic Surgeon</h4>
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p>
+                                        <i class="bi bi-quote quote-icon-left"></i>
+                                        <span>Thanks to Dr. Williams's skill in orthopedic surgery, I am now able to walk comfortably after a severe knee injury. His professionalism and the successful surgery have vastly improved my quality of life.</span>
+                                        <i class="bi bi-quote quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div><!-- End testimonial item -->
+
+                            <!-- Testimonial Item 5 -->
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <img src="RecommendedDoctorAssets/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="Dr. Lisa Taylor">
+                                    <h3>Dr. Taylor</h3>
+                                    <h4>Pediatrician</h4>
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p>
+                                        <i class="bi bi-quote quote-icon-left"></i>
+                                        <span>Dr. Taylor has been a fantastic pediatrician for our children. His compassionate care and thorough medical knowledge have ensured our kids stay healthy and happy. he always goes the extra mile to make them comfortable.</span>
+                                        <i class="bi bi-quote quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div><!-- End testimonial item -->
+
+                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
-
-
-                    </div>
-
                 </div>
-
             </section>
-
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
         </div>
         <!-- Footer Start -->
         <div class="container-fluid pt-4 px-4">
@@ -269,6 +309,7 @@
 
 <!-- Template Javascript -->
 <script src="js/main.js"></script>
+<script src="RecommendedDoctorAssets/assets/js/main.js"></script>
 </body>
 
 </html>

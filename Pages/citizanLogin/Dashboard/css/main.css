@@ -1296,7 +1296,8 @@ section,
 }
 
 .doctors .team-member:hover {
-  transform: translateY(-10px);
+  transform: translateY(-15px);
+  background-color: rgba(93, 209, 245, 0.42);
 }
 
 .doctors .team-member .member-info {

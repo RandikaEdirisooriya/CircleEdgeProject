@@ -34,7 +34,8 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
 
 <body>
 <div class="container-xxl position-relative bg-white d-flex p-0">
@@ -66,10 +67,10 @@
             <div class="navbar-nav w-100">
                 <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Home</a>
 
-                <a href="MyHealth.html" class="nav-item nav-link"><i class="fa fa-heart me-2"></i>My Health</a>
+                <a href="MyHealth.html" class="nav-item nav-link "><i class="fa fa-heart me-2"></i>My Health</a>
                 <a href="Report.html" class="nav-item nav-link "><i class="fa fa-file me-2"></i>Report</a>
-                <a href="Doctors.html" class="nav-item nav-link active"><i class="fa fa-stethoscope me-2"></i>Doctor</a>
-                <a href="Order.html" class="nav-item nav-link"><i class="fa fa-file-invoice-dollar me-2"></i>Order</a>
+                <a href="Doctors.html" class="nav-item nav-link active "><i class="fa fa-stethoscope me-2"></i>Doctor</a>
+                <a href="Order.html" class="nav-item nav-link "><i class="fa fa-file-invoice-dollar me-2"></i>Order</a>
                 <a href="Shedule.html" class="nav-item nav-link"><i class="fa fa-calendar me-2"></i>Shedule</a>
                 <a href="chart.html" class="nav-item nav-link"><i class="fa fa-sign-out-alt me-2"></i>Log Out</a>
 
@@ -172,63 +173,173 @@
         <!-- Navbar End -->
         <div class="container-fluid pt-4 px-4">
 
-            <section id="doctors" class="doctors section">
 
-                <!-- Section Title -->
-                <div class="container section-title" data-aos="fade-up">
-
-                </div><!-- End Section Title -->
-
-                <div class="container">
-
-                    <div class="row gy-4">
-
-                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                            <a href="RecommenedDoctors.html" class="team-member d-flex align-items-start text-decoration-none">
-                                <div class="pic"><img src="img/doc5.png" class="img-fluid" alt=""></div>
-                                <div class="member-info">
-                                    <br>
-
-                                    <h2>Doctors</h2>
-
-                                    <p class="text-success">Obtain Your Recommended Doctors </p>
-                                    <h6 class="text-primary">Click Here</h6>
-
-                                </div>
-                            </a>
-                        </div><div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                        <a href="RecentDoctor.html" class="team-member d-flex align-items-start text-decoration-none">
-                            <div class="pic">
-                                <img src="img/doc6.png" class="img-fluid" alt="">
+            <table class="table align-middle mb-0 bg-white bg-success">
+                <thead class="bg-light">
+                <tr>
+                    <th>Name</th>
+                    <th>Categories</th> <!-- e.g., Neurologist -->
+                    <th>Medical Center</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+                            <div class="ms-3">
+                                <p class="fw-bold mb-1">Dr. John Doe</p>
+                                <p class="text-muted mb-0">john.doe@gmail.com</p>
                             </div>
-                            <div class="member-info">
-                                <br>
-                                <h2>Recent Doctors</h2>
-                                <p class="text-success">Obtain Your Recent Doctors</p>
-                                <h6 class="text-primary">Click Here</h6>
+                        </div>
+                    </td>
+                    <td>Neurologist</td>
+                    <td>City Hospital</td>
+                    <td>2024-06-20</td>
+                    <td>
+                        <button type="button" class="btn btn-link btn-sm btn-rounded">Edit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="https://mdbootstrap.com/img/new/avatars/6.jpg" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+                            <div class="ms-3">
+                                <p class="fw-bold mb-1">Dr. Alex Ray</p>
+                                <p class="text-muted mb-0">alex.ray@gmail.com</p>
                             </div>
-                        </a>
-
-                    </div>
-
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+                        </div>
+                    </td>
+                    <td>Cardiologist</td>
+                    <td>HealthCare Center</td>
+                    <td>2024-06-18</td>
+                    <td>
+                        <button type="button" class="btn btn-link btn-rounded btn-sm fw-bold" data-mdb-ripple-color="dark">Edit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="https://mdbootstrap.com/img/new/avatars/7.jpg" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+                            <div class="ms-3">
+                                <p class="fw-bold mb-1">Dr. Kate Hunington</p>
+                                <p class="text-muted mb-0">kate.hunington@gmail.com</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Pediatrician</td>
+                    <td>Children's Clinic</td>
+                    <td>2024-06-15</td>
+                    <td>
+                        <button type="button" class="btn btn-link btn-rounded btn-sm fw-bold" data-mdb-ripple-color="dark">Edit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+                            <div class="ms-3">
+                                <p class="fw-bold mb-1">Dr. John Doe</p>
+                                <p class="text-muted mb-0">john.doe@gmail.com</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Neurologist</td>
+                    <td>City Hospital</td>
+                    <td>2024-06-20</td>
+                    <td>
+                        <button type="button" class="btn btn-link btn-sm btn-rounded">Edit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="https://mdbootstrap.com/img/new/avatars/6.jpg" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+                            <div class="ms-3">
+                                <p class="fw-bold mb-1">Dr. Alex Ray</p>
+                                <p class="text-muted mb-0">alex.ray@gmail.com</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Cardiologist</td>
+                    <td>HealthCare Center</td>
+                    <td>2024-06-18</td>
+                    <td>
+                        <button type="button" class="btn btn-link btn-rounded btn-sm fw-bold" data-mdb-ripple-color="dark">Edit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="https://mdbootstrap.com/img/new/avatars/7.jpg" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+                            <div class="ms-3">
+                                <p class="fw-bold mb-1">Dr. Kate Hunington</p>
+                                <p class="text-muted mb-0">kate.hunington@gmail.com</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Pediatrician</td>
+                    <td>Children's Clinic</td>
+                    <td>2024-06-15</td>
+                    <td>
+                        <button type="button" class="btn btn-link btn-rounded btn-sm fw-bold" data-mdb-ripple-color="dark">Edit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+                            <div class="ms-3">
+                                <p class="fw-bold mb-1">Dr. John Doe</p>
+                                <p class="text-muted mb-0">john.doe@gmail.com</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Neurologist</td>
+                    <td>City Hospital</td>
+                    <td>2024-06-20</td>
+                    <td>
+                        <button type="button" class="btn btn-link btn-sm btn-rounded">Edit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="https://mdbootstrap.com/img/new/avatars/6.jpg" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+                            <div class="ms-3">
+                                <p class="fw-bold mb-1">Dr. Alex Ray</p>
+                                <p class="text-muted mb-0">alex.ray@gmail.com</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Cardiologist</td>
+                    <td>HealthCare Center</td>
+                    <td>2024-06-18</td>
+                    <td>
+                        <button type="button" class="btn btn-link btn-rounded btn-sm fw-bold" data-mdb-ripple-color="dark">Edit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="https://mdbootstrap.com/img/new/avatars/7.jpg" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+                            <div class="ms-3">
+                                <p class="fw-bold mb-1">Dr. Kate Hunington</p>
+                                <p class="text-muted mb-0">kate.hunington@gmail.com</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Pediatrician</td>
+                    <td>Children's Clinic</td>
+                    <td>2024-06-15</td>
+                    <td>
+                        <button type="button" class="btn btn-link btn-rounded btn-sm fw-bold" data-mdb-ripple-color="dark">Edit</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
 
 
 

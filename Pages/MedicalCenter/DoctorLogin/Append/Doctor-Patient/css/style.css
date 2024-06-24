@@ -1,0 +1,115 @@
+:root {
+    --primary: rgb(1, 33, 40);
+    --light: rgba(222, 225, 225, 0.27);
+    --dark: #2e555b;
+}
+
+/* Reset Body and HTML */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    background: #f8f9fa;
+}
+
+/* Content Full Width */
+.content {
+    width: 100vw;
+    min-height: 100vh;
+    padding-left: 0;
+    padding-right: 0;
+    background: #FFFFFF;
+    transition: 0.5s;
+}
+
+.navbar {
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background: #f8f9fa;
+    padding: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    color: var(--dark);
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: var(--primary);
+}
+
+.navbar-nav .nav-item .dropdown-menu {
+    background: #fff;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Control */
+.form-control {
+    border-radius: 0.375rem;
+    border: 1px solid #e5e7eb;
+}
+
+input[type="search"] {
+    padding: 0.5rem;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: var(--primary);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: var(--dark);
+}
+
+/* Utilities */
+.rounded {
+    border-radius: 0.375rem;
+}
+
+.rounded-top {
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .content {
+        padding: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .content {
+        padding: 0;
+    }
+}
+/**/

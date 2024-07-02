@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="Backend_Js/jquery.min.js"></script>
+    <script src="Backend_Js/RegisterMedicalCenter.js"></script>
 </head>
 <body>
 <div class="main">
@@ -40,19 +42,19 @@
                         <!-- Input Box -->
                         <div class="form-input">
                             <span><i class="fa fa-map-marker"></i></span>
-                            <input type="text" name="" placeholder="Location" tabindex="10"required>
+                            <input type="text" name="" id="location" placeholder="Location" tabindex="10"required>
                         </div>
                         <div class="form-input">
                             <span><i class="fa fa-comments"></i></span>
-                            <input type="text" name="" placeholder="Owner Name" tabindex="10"required>
+                            <input type="text" name="" id="OwnerName" placeholder="Owner Name" tabindex="10"required>
                         </div>
                         <div class="form-input">
                             <span><i class="fa fa-shopping-cart"></i></span>
-                            <input type="text" name="" placeholder="Type of Facility" tabindex="10"required>
+                            <input type="text" name="" id="facility" placeholder="Type of Facility" tabindex="10"required>
                         </div>
                         <div class="form-input">
                             <span><i class="fa fa-check"></i></span>
-                            <input type="text" name="" placeholder="Capacity" tabindex="10"required>
+                            <input type="text" name="" id="capacity" placeholder="Capacity" tabindex="10"required>
                         </div>
 
 
@@ -60,7 +62,7 @@
 
                         <!-- Register Button -->
                         <div class="mb-3">
-                            <button type="submit" class="btn btn-block" style="width: 30%;position: relative;left: 35%">Register</button>
+                            <button type="button" class="btn btn-primary btn-block" style="width: 30%;position: relative;left: 35%;border-radius: 10%" onclick="saveMedicalCenter()">Register</button>
                         </div>
 
                     </form>

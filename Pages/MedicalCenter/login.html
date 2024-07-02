@@ -14,6 +14,8 @@
 	/>
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="Backend_Js/jquery.min.js"></script>
+	<script src="Backend_Js/LoginMedicalCenter.js"></script>
 </head>
 <body>
 	<div class="container-fluid">
@@ -37,11 +39,11 @@
 						<!-- Input Box -->
 						<div class="form-input">
 							<span><i class="fa fa-envelope"></i></span>
-							<input type="text" name="" placeholder="Medical center name" tabindex="10"required>
+							<input type="text" name="" id="medicalCenterName" placeholder="Medical center name" tabindex="10"required>
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-lock"></i></span>
-							<input type="password" name="" placeholder="Registration Code" required>
+							<input type="password" name="" id="Code" placeholder="Registration Code" required>
 						</div>
 						<div class="row mb-3">
 							<!--Remember Checkbox -->
@@ -55,7 +57,11 @@
 				
 				    <!-- Login Button -->
 				    <div class="mb-3">
+						<button type="button"  class="btn btn-primary btn-block" style="border-radius: 30px;width: 50%;text-align: center;position: relative;left: 30%" onclick="checkLoginMC()">Login</button>
+
+<!--
 						<a href="centerDash.html" class="btn btn-primary btn-block" style="border-radius: 30px;width: 33%;text-align: center;position: relative;left: 35%">Login</a>
+-->
 						<!--	<button type="submit" class="btn btn-block">Login</button>-->
 						</div>
 					  <!-- Forget Password -->

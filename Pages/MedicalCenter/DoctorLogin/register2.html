@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="DoctorJS/jquery.min.js"></script>
+    <script src="DoctorJS/DoctorRegister.js"></script>
 </head>
 <body>
 <div class="main">
@@ -40,31 +42,31 @@
                         <!-- Input Box -->
                         <div class="form-input">
                             <span><i class="fa fa-folder"></i></span>
-                            <input type="text" name="" placeholder="Specialization" tabindex="10"required>
+                            <input type="text" name="" id="Specialization" placeholder="Specialization" tabindex="10"required>
                         </div>
                         <div class="form-input">
                             <span><i class="fa fa-code"></i></span>
-                            <input type="number" name="" placeholder="Medical License Number" tabindex="10"required>
+                            <input type="number" name="" id="LicenseNumber" placeholder="Medical License Number" tabindex="10"required>
                         </div>
                         <div class="form-input">
                             <span><i class="fa fa-id-card"> </i></span>
 
-                            <input type="text" name="dob" placeholder="NIC Number" required>
+                            <input type="text" name="dob" id="NIC" placeholder="NIC Number" required>
                         </div>
                         <div class="form-input">
                            <!-- <span><i class="fa fa-phone">Upload your NIC photo </i></span>-->
                             <label  class="form-label" style="font-weight: bold;opacity: 60%">Upload your NIC photo</label>
-                            <input type="file" name="dob" placeholder="Contact Number" required>
+                            <input type="file" name="dob" placeholder="" required>
                         </div>
                         <div class="form-input">
 
                             <label  class="form-label" style="font-weight: bold;opacity: 60%">Upload MBBS Certificat</label>
-                            <input type="file" name="dob" placeholder="Contact Number" required>
+                            <input type="file" name="dob" placeholder="" required>
                         </div>
 
                         <!-- Register Button -->
                         <div class="mb-3">
-                            <a href="sendCode.html" class="btn btn-primary btn-block" style="border-radius: 30px;width: 70%;text-align: center;position: relative;left: 15%;background-color: #577BE8FF;font-weight: bold">Send Registration Code</a>
+                            <button type="button" href="sendCode.html" class="btn btn-primary btn-block" style="border-radius: 30px;width: 70%;text-align: center;position: relative;left: 15%;background-color: #577BE8FF;font-weight: bold" onclick="sendCode()">Send Registration Code</button>
 
 
                         </div>

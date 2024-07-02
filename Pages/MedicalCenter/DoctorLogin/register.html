@@ -15,6 +15,8 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="DoctorJS/jquery.min.js"></script>
+	<script src="DoctorJS/DoctorRegister.js"></script>
 </head>
 <body>
 <div class="main">
@@ -41,25 +43,25 @@
 						<!-- Input Box -->
 						<div class="form-input">
 							<span><i class="fa fa-user"></i></span>
-							<input type="text" name="" placeholder="Full Name" tabindex="10"required>
+							<input type="text" name="" id="FullName" placeholder="Full Name" tabindex="10"required>
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-envelope"></i></span>
-							<input type="email" name="" placeholder="Email Address" tabindex="10"required>
+							<input type="email" name="" id="EmailAddress" placeholder="Email Address" tabindex="10"required>
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-calendar"> </i></span>
 
-							<input type="text" name="dob" placeholder="Date Of Birth" required>
+							<input type="text" name="dob" id="DOB" placeholder="Date Of Birth" required>
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-phone"> </i></span>
 
-							<input type="text" name="dob" placeholder="Contact Number" required>
+							<input type="text" name="dob" id="ContactNumber" placeholder="Contact Number" required>
 						</div>
 						<div class="form-input">
 							<!--<span><i class="fa fa-venus-mars"></i></span>-->
-							<select name="gender" required style="width: 100%;padding-bottom: 5px;margin-bottom: 10px;opacity: 60%">
+							<select name="gender"  id="gender" required style="width: 100%;padding-bottom: 5px;margin-bottom: 10px;opacity: 60%">
 								<option value="" disabled selected>Select Gender</option>
 								<option value="male">Male</option>
 								<option value="female">Female</option>
@@ -67,7 +69,7 @@
 						</div>
 						<!-- Register Button -->
 						<div class="mb-3">
-							<a href="register2.html" class="btn btn-primary btn-block" style="border-radius: 30px;width: 33%;text-align: center;position: relative;left: 35%">Next</a>
+							<button type="button" class="btn btn-primary btn-block" style="width: 33%; border-radius: 10%; text-align: center; position: relative; left: 35%;" onclick="nextButtonD()">Next</button>
 						</div>
 
 					</form>

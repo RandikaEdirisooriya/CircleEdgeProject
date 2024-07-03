@@ -38,6 +38,10 @@
 
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
+  <script src="../../DoctorJS/jquery.min.js"></script>
+  <script src="../../DoctorJS/CheckId.js"></script>
+
+  <script src="../DoctorJS/CheckId.js"></script>
 </head>
 <style>
   .simple {
@@ -232,8 +236,8 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="img/testimonial-2.jpg" class="testimonial-img" alt="mr.Smith" style="width: 30%;aspect-ratio: 1/1" >
-                <h3 id="username">mr.Smith</h3>
-                <h6 >Age-<span id="age"></span></h6>
+                <h3 id="username"></h3>
+                <h6 >Age-<span id="age">22</span></h6>
 
                 <div class="simple">
                   <p><i class="fa fa-mars"></i> Gender - <b>Male</b></p>
@@ -1456,6 +1460,19 @@
       const option = document.createElement('option');
       option.value = disease;
       datalist.appendChild(option);
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      // Retrieve data from localStorage
+      let name = localStorage.getItem('firstName');
+
+     $('#username').text(name);
+
+
+      console.log(name)
+
+
     });
   </script>
 

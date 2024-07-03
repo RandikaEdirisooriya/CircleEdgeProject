@@ -14,9 +14,10 @@ function CheckId(){
 
         success: function(data){
             alert("Ok");
+            console.log("Data received:", data.firstName);
+            localStorage.setItem('firstName',data.firstName);
 
-
-            EmptyText();
+           EmptyText();
             window.location.href = "Doctor-Patient/Doctor-Patient.html";
         },
         error: function(){

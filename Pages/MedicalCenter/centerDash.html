@@ -22,6 +22,8 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script src="Backend_Js/jquery.min.js"></script>
+        <script src="Backend_Js/LoginMedicalCenter.js"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -52,7 +54,10 @@
             <div class="container px-4 px-lg-5 h-100">
                 <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-8 align-self-end">
-                        <h1 class="text-black font-weight-bold">Singhe Hospital <br> Ratnapura</h1>
+                        <h1 class="text-black font-weight-bold" id="medicalCenter">
+                            <br>
+                            <h2 class="font-weight-bold" id="location"></h2>
+                        </h1>
 
                         <!--class="text-white font-weight-bold"-->
                         <hr class="divider" />
@@ -267,10 +272,31 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+<!--        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>-->
+        <script>
+            $(document).ready(function() {
+                // Retrieve data from localStorage
+                let medicalCenterName = localStorage.getItem('MedicalCenterName');
+                let location = localStorage.getItem('location');
+                $('#medicalCenter').text(medicalCenterName);
+
+                $('#location').text(location);
+                console.log(medicalCenterName)
+                console.log(location)
+                // Update elements if data exists
+              /*  if (medicalCenterName) {
+                    $('#medicalCenter').text(medicalCenterName);
+                } else {
+                    $('#medicalCenter').text('Medical Center not available'); // Fallback text
+                }
+
+                if (location) {
+                    $('#location').text(location);
+                } else {
+                    $('#location').text('Location not available'); // Fallback text
+                }*/
+            });
+        </script>
     </body>
 </html>

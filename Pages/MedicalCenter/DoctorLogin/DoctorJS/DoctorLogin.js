@@ -14,6 +14,8 @@ function checkLoginDoctor() {
         success: function(data){
             alert("Ok");
             // Navigate to Dashboard/index.html
+            console.log("Data received:", data.fullName);
+            localStorage.setItem('DoctorName',data.fullName);
             EmptyText();
             window.location.href = "Append/enter_patient_id.html";
         },

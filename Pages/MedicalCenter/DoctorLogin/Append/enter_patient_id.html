@@ -26,6 +26,8 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <script src="../DoctorJS/jquery.min.js"></script>
+  <script src="../DoctorJS/DoctorLogin.js"></script>
 </head>
 
 <body class="index-page">
@@ -92,7 +94,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10">
-            <h2 data-aos="fade-up" data-aos-delay="100" style="color: black">Welcome</h2>
+            <h2 data-aos="fade-up" data-aos-delay="100" style="color: black">Welcome<br> <span id="DoctorName"></span></h2>
             <p data-aos="fade-up" data-aos-delay="200">It's time to begin your patient examination.</p>
           </div>
           <div class="col-lg-5">
@@ -133,6 +135,19 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Retrieve data from localStorage
+      let DoctorName = localStorage.getItem('DoctorName');
+
+     $('#DoctorName').text(DoctorName);
+
+
+      console.log(DoctorName)
+
+
+    });
+  </script>
 
 </body>
 

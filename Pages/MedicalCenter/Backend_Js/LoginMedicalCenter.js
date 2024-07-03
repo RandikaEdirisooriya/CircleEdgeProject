@@ -13,9 +13,13 @@ function checkLoginMC() {
 
         success: function(data){
            alert("Ok");
+            console.log("Data received:", data);
+           /* $('#UserName').text(data.firstName);*/
+           localStorage.setItem('MedicalCenterName', data.name);
+           localStorage.setItem('location', data.address);
             // Navigate to Dashboard/index.html
             EmptyText();
-            window.location.href = "centerDash.html";
+           window.location.href = "centerDash.html";
         },
         error: function(){
             alert("Error");

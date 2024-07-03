@@ -34,6 +34,8 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script src="../jsCitizan/jquery.min.js"></script>
+    <script src="../jsCitizan/CitizanLogin.js"></script>
 </head>
 
 <body>
@@ -59,7 +61,7 @@
                     <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                 </div>
                 <div class="ms-3">
-                    <h6 class="mb-0">Randika</h6>
+                    <h6 class="mb-0" id="UserName"></h6>
                     <span>User</span>
                 </div>
             </div>
@@ -159,7 +161,7 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                         <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                        <span class="d-none d-lg-inline-flex">Randika</span>
+                        <span class="d-none d-lg-inline-flex" id="UserName2"></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                         <a href="#" class="dropdown-item">My Profile</a>
@@ -393,6 +395,16 @@
 
 <!-- Template Javascript -->
 <script src="js/main.js"></script>
+<script>
+    $(document).ready(function() {
+        let userFirstName = localStorage.getItem('userFirstName');
+        if (userFirstName) {
+            $('#UserName').text(userFirstName);
+            $('#UserName2').text(userFirstName);
+            $('#DashName').text(userFirstName);
+        }
+    });
+</script>
 </body>
 
 </html>

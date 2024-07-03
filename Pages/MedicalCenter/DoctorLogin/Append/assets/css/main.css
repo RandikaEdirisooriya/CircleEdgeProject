@@ -143,6 +143,7 @@ h6 {
   }
 
   .header .navmenu {
+    display: none;
     order: 3;
   }
 }

@@ -28,6 +28,7 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <script src="../DoctorJS/jquery.min.js"></script>
   <script src="../DoctorJS/DoctorLogin.js"></script>
+  <script src="../DoctorJS/CheckId.js"></script>
 </head>
 
 <body class="index-page">
@@ -99,8 +100,11 @@
           </div>
           <div class="col-lg-5">
             <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
-              <input type="password" class="form-control" placeholder="Enter Patient ID">
+              <input type="password"  id="NIC" class="form-control" placeholder="Enter Patient ID">
+              <button type="button"  class="btn" style="background-color: #41acf8; border-color: lightskyblue" onclick="CheckId()">Enter</button>
+<!--
               <a href="Doctor-Patient/Doctor-Patient.html" class="btn" style="background-color: #41acf8; border-color: lightskyblue">Enter</a>
+-->
 <!--
               <input type="submit" class="btn" value="Enter" style="background-color: #41acf8; border-color: lightskyblue">
 -->

@@ -2,7 +2,7 @@
 :root {
     --primary: rgb(1, 33, 40);
     --light: rgba(222, 225, 225, 0.27);
-    --dark: #2e555b;
+    --dark: #0c2160;
 }
 
 .back-to-top {
@@ -138,7 +138,7 @@
 .sidebar .navbar .navbar-nav .nav-link:hover,
 .sidebar .navbar .navbar-nav .nav-link.active {
     color: var(--primary);
-    background: rgba(15, 87, 96, 0.42);
+    background: rgba(50, 94, 232, 0.48);
     border-color: var(--primary);
 }
 
@@ -148,7 +148,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #61b9c5;
+    background: rgba(50, 94, 232, 0.48);
     border-radius: 40px;
 }
 
@@ -196,7 +196,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(6, 166, 192, 0.26);
+    background: rgba(50, 94, 232, 0.48);
     border-radius: 40px;
 }
 

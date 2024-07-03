@@ -135,7 +135,11 @@
     outline: none;
 }
 
-.sidebar .navbar .navbar-nav .nav-link:hover,
+.sidebar .navbar .navbar-nav .nav-link:hover{
+    color: var(--primary);
+    background: rgba(195, 208, 248, 0.48);
+    border-color: var(--primary);
+}
 .sidebar .navbar .navbar-nav .nav-link.active {
     color: var(--primary);
     background: rgba(50, 94, 232, 0.48);

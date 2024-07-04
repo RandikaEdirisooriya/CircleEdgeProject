@@ -635,7 +635,7 @@ body {
     flex-direction: row;
     background: #f6f6f6;
     border-radius: 0 0 5px 5px;
-    padding: 25px;
+    /*padding: 25px;*/
     flex-wrap: wrap; /* Allow wrapping */
 }
 form {

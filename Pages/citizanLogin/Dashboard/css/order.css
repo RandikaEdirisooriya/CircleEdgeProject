@@ -2,7 +2,7 @@
 :root {
     --primary: rgb(1, 33, 40);
     --light: rgba(222, 225, 225, 0.27);
-    --dark: #0b2169;
+    --dark: #0c2160;
 }
 
 .back-to-top {
@@ -135,10 +135,14 @@
     outline: none;
 }
 
-.sidebar .navbar .navbar-nav .nav-link:hover,
+.sidebar .navbar .navbar-nav .nav-link:hover{
+    color: var(--primary);
+    background: rgba(195, 208, 248, 0.48);
+    border-color: var(--primary);
+}
 .sidebar .navbar .navbar-nav .nav-link.active {
     color: var(--primary);
-    background: rgba(15, 87, 96, 0.42);
+    background: rgba(50, 94, 232, 0.48);
     border-color: var(--primary);
 }
 
@@ -148,7 +152,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #61b9c5;
+    background: rgba(50, 94, 232, 0.48);
     border-radius: 40px;
 }
 
@@ -196,7 +200,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(6, 166, 192, 0.26);
+    background: rgba(50, 94, 232, 0.48);
     border-radius: 40px;
 }
 
@@ -603,6 +607,8 @@
 }
 
 
+
+
 /* Import Google Font */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
 
@@ -645,11 +651,11 @@ form {
     border: 1px solid #dadada;
 }
 .title {
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #5195A8), color-stop(100, #70EAFF));
-    background: -moz-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
-    background: -ms-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
-    background: -o-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
-    background: linear-gradient(to bottom right, #5195A8 0%, #70EAFF 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0, rgba(50, 94, 232, 0.48)), color-stop(100, rgba(50, 94, 232, 0.48)));
+    background: -moz-linear-gradient(top left, rgba(50, 94, 232, 0.48) 0%, #006ebe 100%);
+    background: -ms-linear-gradient(top left, rgba(50, 94, 232, 0.48) 0%, #006ebe 100%);
+    background: -o-linear-gradient(top left, rgba(50, 94, 232, 0.48) 0%, #006ebe 100%);
+    background: linear-gradient(to bottom right, rgba(50, 94, 232, 0.48) 0%, #006ebe 100%);
     border-radius: 5px 5px 0 0;
     padding: 20px;
     color: #f6f6f6;

@@ -307,87 +307,21 @@
         </div>
 
 
-        <div class="col-sm-12 col-xl-6"style="width: 70%">
+        <div class="col-sm-12 col-xl-6" style="width: 70%">
           <div class="bg-light rounded h-100 p-4 custom-container">
-
-         <!-- <h1>
-            <div class="col-md-6" id="place-col-order-detail">
-              <div class="col" id="item-content" >
-                <form class="form_input2" id="items-form">
-                  <div class="card-header text-center gradient-text" id="place-order-detail">
-                    <br><br>
-                    Order Details
-                  </div>
-
-                  <div class="m-3 col-md-11">
-                    <label for="order_item_code" class="form-label">Item Code</label>
-                    <select class="form-select" aria-label="Disabled select example" id="order_item_code">
-                      <option selected>Select Item Code</option>
-                    </select>
-                  </div>
-                  <div class="m-3 col-md-11">
-                    <label for="order_item_name" class="form-label">Item Name</label>
-                    <input type="text" class="form-control" id="order_item_name" placeholder="Item Name Here" disabled>
-                  </div>
-                  <div class="m-3 col-md-11">
-                    <label for="order_price" class="form-label">Price</label>
-                    <input type="number" class="form-control" id="order_price" placeholder="Price Here" disabled>
-                  </div>
-                  <div class="m-3 col-md-11">
-                    <label for="qty_on_hand" class="form-label">Qty on Hand</label>
-                    <input type="number" class="form-control" id="qty_on_hand" placeholder="Qty on hand Here" disabled>
-                  </div>
-                  <div class="m-3 col-md-11">
-                    <label for="getQty" class="form-label">Getting Qty</label>
-                    <input type="number" class="form-control" id="getQty" placeholder="Qty Here">
-                  </div>
-                  <div id="button" style="margin-left: 18px;">
-                    <button id="order_add_btn" type="button" class="btn btn-outline-primary">ADD</button>
-                    <button id="order_update_btn" type="button" class="btn btn-outline-success">Update</button>
-                    <button id="order_delete_btn" type="button" class="btn btn-outline-danger">Delete</button>
-                    <button id="order_reset_btn" type="button" class="btn btn-outline-warning">Reset</button>
-                  </div>
-
-                  <div class="col m-3" >
-                    <table class="table" id="item-order-table" style="margin-left: 0">
-                      <thead class="table-primary">
-                      <tr>
-                        <th scope="col">Item Code</th>
-                        <th scope="col">Item Name</th>
-                        <th scope="col">Price Per Kg</th>
-                        <th scope="col">Qty On Hand</th>
-                        <th scope="col">Qty</th>
-                        &lt;!&ndash;<th scope="col">Qty</th>&ndash;&gt;
-                      </tr>
-                      </thead>
-                      <tbody>
-
-                      </tbody>
-                    </table>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </h1>-->
             <div class="form-group">
-
-
               <label for="TextInputDisease" style="color:black;">Disease</label>
               <input type="text" id="TextInputDisease" class="form-control" placeholder="Search disease" list="diseases">
               <datalist id="diseases"></datalist>
-
             </div>
             <br><br>
 
-            <form style="border: 2px solid grey; padding: 10px">
-              <fieldset >
-
+            <form style="border: 2px solid grey; padding: 10px" onsubmit="return false;">
+              <fieldset>
                 <br>
-
                 <div class="form-group">
                   <label for="TextInputMedicine" style="color:black;">Medicine Name</label>
                   <input type="text" id="TextInputMedicine" class="form-control" placeholder="Search medicine" list="medicines">
-
                   <datalist id="medicines">
                     <option value="Acetaminophen"></option>
                     <option value="Ibuprofen"></option>
@@ -409,30 +343,19 @@
                     <option value="Metoprolol"></option>
                     <option value="Montelukast"></option>
                     <option value="Omeprazole"></option>
-                    <!-- Add the rest of the medicine names here -->
                   </datalist>
-
                 </div>
                 <br>
-
-
                 <div class="form-group">
                   <label for="doses" style="color:black;">Doses</label>
-                  <input type="text" id="doses" class="form-control" placeholder="Enter doses count" style="">
+                  <input type="text" id="doses" class="form-control" placeholder="Enter doses count">
                 </div>
-
                 <div class="form-group">
-                  <label for="note" style="color:black;"> Note</label>
+                  <label for="note" style="color:black;">Note</label>
                   <textarea type="text" id="note" class="form-control" placeholder="Special Note"></textarea>
                 </div>
                 <br>
-                <!--<div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
-                  <label class="form-check-label" for="disabledFieldsetCheck">
-                    Can't check this
-                  </label>
-                </div>-->
-                <button type="submit" class="btn btn-primary">Add</button>
+                <button type="button" id="addButton" class="btn btn-primary" onclick="addToTable()">Add</button>
               </fieldset>
             </form>
             <br>
@@ -440,10 +363,9 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="table-responsive-sm">
-                  <table class="table table-bordered table-hover">
+                  <table class="table table-bordered table-hover" id="medicineTable">
                     <thead class="thead-dark">
                     <tr>
-                      <!--<th scope="col">Disease</th>-->
                       <th scope="col">Medicine Name</th>
                       <th scope="col">Doses</th>
                       <th scope="col">Note</th>
@@ -451,41 +373,41 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <!--<tr>
-                      <th scope="row">Common Cold</th>
-                      <td></td>
-                      <td><div class="quantity"><span class="dec q-btn">-</span><input type="text" value="1"><span class="inc q-btn">+</span></div></td>
-                      <td>$10</td>
-                      <td><a href=""><i class="fa fa-trash-o"></i></a></td>
-                    </tr>-->
+
+                    </tbody>
+                   <!-- <tbody>
                     <tr>
                       <th scope="row">Amoxicillin</th>
-                      <!--<td>www</td>-->
-                      <td><div class="quantity"><span class="dec q-btn">-</span><input type="text" value="2"><span class="inc q-btn">+</span></div></td>
+                      <td>
+                        <div class="quantity">
+                          <span class="dec q-btn">-</span>
+                          <input type="text" value="2">
+                          <span class="inc q-btn">+</span>
+                        </div>
+                      </td>
                       <td>-</td>
-                      <td><a href=""><i class="fa fa-trash-o"></i></a></td>
+                      <td><a href="" onclick="deleteRow(this)"><i class="fa fa-trash-o"></i></a></td>
                     </tr>
                     <tr>
                       <th scope="row">Paracetamol</th>
-                      <!--<td>$20</td>-->
-                      <td><div class="quantity"><span class="dec q-btn">-</span><input type="text" value="3"><span class="inc q-btn">+</span></div></td>
+                      <td>
+                        <div class="quantity">
+                          <span class="dec q-btn">-</span>
+                          <input type="text" value="3">
+                          <span class="inc q-btn">+</span>
+                        </div>
+                      </td>
                       <td>When needed</td>
-                      <td><a href=""><i class="fa fa-trash-o"></i></a></td>
+                      <td><a href="" onclick="deleteRow(this)"><i class="fa fa-trash-o"></i></a></td>
                     </tr>
-                    </tbody>
+                    </tbody>-->
                   </table>
                 </div>
-                <!--<div class="btn p-0">
-                  <button type="submit" class="btn-primary">Checkout</button>
-                </div>-->
                 <button type="submit" class="btn btn-primary" style="background-color: limegreen">Done</button>
               </div>
             </div>
-
-
           </div>
         </div>
-
 
       </div>
     </div>
@@ -1514,6 +1436,36 @@
     });
   </script>
   <script>
+
+    $('#addButton').click(function() {
+      // Get input values
+      var medicineName = $('#TextInputMedicine').val();
+      var doses = $('#doses').val();
+      var note = $('#note').val();
+
+      // Create a new row and cells
+      var table = $('#medicineTable tbody');
+      var newRow = $('<tr>');
+
+      newRow.append('<th scope="row">' + medicineName + '</th>');
+      newRow.append('<td><div class="quantity"><span class="dec q-btn">-</span><input type="text" value="' + doses + '"><span class="inc q-btn">+</span></div></td>');
+      newRow.append('<td>' + note + '</td>');
+      newRow.append('<td><a href="" class="deleteRow"><i class="fa fa-trash-o"></i></a></td>');
+
+      // Add the new row to the table
+      table.append(newRow);
+
+      // Clear input fields
+      $('#TextInputMedicine').val('');
+      $('#doses').val('');
+      $('#note').val('');
+    });
+
+    // Delegate delete row event
+    $('#medicineTable').on('click', '.deleteRow', function(e) {
+      e.preventDefault();
+      $(this).closest('tr').remove();
+    });
     $(document).ready(function() {
       // Retrieve data from localStorage
       let name = localStorage.getItem('firstName');
